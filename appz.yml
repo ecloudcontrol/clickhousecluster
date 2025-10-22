@@ -11,10 +11,10 @@
         image_template: clickhousecluster-25.4
 
     deploy:
-        context: alpha/PROD
+        context: vv/PROD
         type: statefulset
         replicas: 1
-        resources: x-large
+        #resources: x-large
         port:
         - 8081
 
