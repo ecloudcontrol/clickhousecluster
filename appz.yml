@@ -11,7 +11,7 @@
         image_template: clickhousecluster-25.4
 
     deploy:
-        context: vv/PROD
+        context: alpha/PROD
         type: statefulset
         replicas: 1
         #resources: x-large
