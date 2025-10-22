@@ -14,7 +14,7 @@
         context: alpha/PROD
         type: statefulset
         replicas: 1
-        #resources: x-large
+        resources: x-large
         port:
         - 8081
 
@@ -24,10 +24,7 @@
         name: data
         size: 5Gi
         matchLabels: false
-      # - claim: mysql-backup
-      #   mount: /appz/backup
-      #   name: backup
-      #   size: 5Gi
+
 
     properties:
         CLICKHOUSE_CLUSTER_NAME: vv-dev
