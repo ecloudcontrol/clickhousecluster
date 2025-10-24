@@ -22,7 +22,7 @@
       - claim: clickhouse-data
         mount: /appz/data
         name: data
-        size: 5Gi
+        size: 50Gi
         matchLabels: false
 
 
