@@ -11,7 +11,7 @@
         image_template: clickhousecluster-25.4
 
     deploy:
-        context: alpha/PROD
+        context: vv/PROD
         type: statefulset
         replicas: 1
         resources: x-large
@@ -22,18 +22,18 @@
       - claim: clickhouse-data
         mount: /appz/data
         name: data
-        size: 50Gi
+        size: 100Gi
         matchLabels: false
 
 
     properties:
-        CLICKHOUSE_CLUSTER_NAME: vv-dev
+        CLICKHOUSE_CLUSTER_NAME: clickhousecluster
         CLICKHOUSE_USER: default
         CLICKHOUSE_PASSWORD:
           vault: CLICKHOUSE_PASSWORD
-        CLICKHOUSE_NODES: 0@clickhousecluster-0:9000
-        KEEPER_NODES: clickhousecluster-0:9181
-        REPLICATION_FACTOR: 5
+        CLICKHOUSE_NODES: 0@clickhousecluster-25-4-0.clickhousecluster-25-4:9000
+        KEEPER_NODES: clickhousecluster-25-4-0.clickhousecluster-25-4:9181
+        REPLICATION_FACTOR: 1
         FLINK_LOG_DIR: /appz/log
         SHARD_COUNT: 1
         ENABLE_FLUENTD: 1
