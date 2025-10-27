@@ -23,7 +23,7 @@
         class: linode-block-storage
         mount: /appz/data
         name: data
-        size: 100Gi
+        size: 200Gi
         matchLabels: false
 
 
