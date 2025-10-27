@@ -4,7 +4,7 @@
         notify: apaul@ecloudcontrol.com
 
     build:
-        version: 25.4
+        version: 25.6
         env: PROD
         build_file: none
         output_files: output/*.zip
