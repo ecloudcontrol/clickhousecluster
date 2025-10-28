@@ -17,6 +17,7 @@
         resources: x-large
         port:
         - 8123
+        - 9000
 
     volumes:
       - claim: clickhouse-data
