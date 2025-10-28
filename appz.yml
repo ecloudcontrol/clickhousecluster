@@ -16,7 +16,7 @@
         replicas: 1
         resources: x-large
         port:
-        - 8081
+        - 8123
 
     volumes:
       - claim: clickhouse-data
