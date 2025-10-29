@@ -11,9 +11,9 @@
         image_template: clickhousecluster-25.6
 
     deploy:
-        context: vv/PROD
+        context: alpha/PROD
         type: statefulset
-        replicas: 1
+        replicas: 2
         resources: x-large
         port:
         - 8123
@@ -33,9 +33,9 @@
         CLICKHOUSE_USER: default
         CLICKHOUSE_PASSWORD:
           vault: CLICKHOUSE_PASSWORD
-        CLICKHOUSE_NODES: 0@clickhousecluster-25-4-0.clickhousecluster-25-4:9000
-        KEEPER_NODES: clickhousecluster-25-4-0.clickhousecluster-25-4:9181
-        REPLICATION_FACTOR: 1
+        CLICKHOUSE_NODES: 0@clickhousecluster-25-4-0.clickhousecluster-25-4:9000,1@clickhousecluster-25-4-1.clickhousecluster-25-4:9000,2@clickhousecluster-25-4-2.clickhousecluster-25-4:9000
+        KEEPER_NODES: clickhousecluster-25-4-0.clickhousecluster-25-4:9181,clickhousecluster-25-4-1.clickhousecluster-25-4:9181,clickhousecluster-25-4-2.clickhousecluster-25-4:9181
+        REPLICATION_FACTOR: 2
         FLINK_LOG_DIR: /appz/log
         SHARD_COUNT: 1
         ENABLE_FLUENTD: 1
