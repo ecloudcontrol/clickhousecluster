@@ -18,7 +18,7 @@
         port:
         - 8123
         - 9000
-        - 9116
+        - 9363
 
     volumes:
       - claim: clickhouse-data
