@@ -1,7 +1,7 @@
     app:
         name: ClickHouseCluster
         code: clickhousecluster
-        notify: apaul@ecloudcontrol.com
+        notify: kullas@maximaconsulting.com
 
     build:
         version: 25.6
