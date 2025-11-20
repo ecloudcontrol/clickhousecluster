@@ -34,6 +34,13 @@
         CLICKHOUSE_USER: default
         CLICKHOUSE_PASSWORD:
           vault: CLICKHOUSE_PASSWORD
+        AKAMAI_ACCESS_KEY:
+          vault: AKAMAI_ACCESS_KEY
+        AKAMAI_SECRET_KEY:
+          vault: AKAMAI_SECRET_KEY
+        AKAMAI_BUCKET: vv-dev-bucket
+        AKAMAI_ENDPOINT: https://us-ord-1.linodeobjects.com
+        AKAMAI_REGION: us-central-1
         CLICKHOUSE_NODES: 0@clickhousecluster-25-6-0.clickhousecluster-25-6.vv-prod.svc.cluster.local:9000,1@clickhousecluster-25-6-1.clickhousecluster-25-6.vv-prod.svc.cluster.local:9000,2@clickhousecluster-25-6-2.clickhousecluster-25-6.vv-prod.svc.cluster.local:9000
         KEEPER_NODES: clickhousecluster-25-6-0.clickhousecluster-25-6.vv-prod.svc.cluster.local:9181,clickhousecluster-25-6-1.clickhousecluster-25-6.vv-prod.svc.cluster.local:9181,clickhousecluster-25-6-2.clickhousecluster-25-6.vv-prod.svc.cluster.local:9181
         REPLICATION_FACTOR: 3
