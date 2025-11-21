@@ -15,6 +15,7 @@
         type: statefulset
         replicas: 3
         resources: x-large
+        imagePullPolicy: Always
         port:
         - 8123
         - 9000
